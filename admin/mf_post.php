@@ -15,6 +15,10 @@ class mf_post extends mf_admin {
 
     //
     add_action( 'admin_footer', array( &$this,'mf_check_wp_gallery_version') );
+    
+    // Add tiny_mce script if required
+	 add_action('admin_footer', array( &$this,'check_exist_visual_editor'));
+
   }
 
   function mf_check_wp_gallery_version() {
